@@ -17,7 +17,7 @@
   fwrite($myfile, "\xEF\xBB\xBF".$result_str); //在字串前加上\xEF\xBB\xBF轉成utf8格式
   $result = json_decode($result_str);
   $ans_txt = $result -> topScoringIntent -> intent;
-  $ans_txt2 = $result -> entities [0]; $array[0] -> entity;
+  $ans_txt2 = $result -> entities; $array[0] -> entity;
   $response = array (
     "to" => $sender_userid,
     "messages" => array (
